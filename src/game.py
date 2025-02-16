@@ -17,18 +17,21 @@ class Game:
         self.screen = pygame.display.set_mode((self.width, self.height))
         pygame.display.set_caption(self.title)
 
-    def run(self,todas_as_sprites, tela):
-        # Loop principal do jogo
+    def run(self,todas_as_sprites, tela, i=0):
+        
         while True:
-            
             for event in pygame.event.get():
                 if event.type == QUIT:
                     self.quit() 
-            self.update()     
+
+            self.update()    
+
             todas_as_sprites.draw(tela)
             todas_as_sprites.update()
+            
             pygame.display.flip()
             self.render()
+            i += 1
 
     def update(self):
         # Atualiza o estado do jogo (neste exemplo, não há nada para atualizar)

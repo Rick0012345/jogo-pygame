@@ -32,10 +32,10 @@ class PlayerRunning(pygame.sprite.Sprite):
         self.image = self.sprites[0]
         
         self.rect = self.image.get_rect()
-        self.rect.topleft = (200, 100)
+        self.rect.topleft = (200, 400)
     
     def update(self):
-        self.atual += 0.1
+        self.atual += 0.05
         if self.atual >= len(self.sprites):
             self.atual = 0
         self.image = self.sprites[int(self.atual)]
