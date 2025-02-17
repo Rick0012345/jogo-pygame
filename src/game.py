@@ -17,9 +17,13 @@ class Game:
         self.screen = pygame.display.set_mode((self.width, self.height))
         pygame.display.set_caption(self.title)
 
+        self.clock = pygame.time.Clock()
+        self.FPS = 30
+
     def run(self,todas_as_sprites, tela, i=0):
         
         while True:
+            self.clock.tick(self.FPS)
             for event in pygame.event.get():
                 if event.type == QUIT:
                     self.quit() 
