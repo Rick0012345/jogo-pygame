@@ -16,7 +16,7 @@ class PlayerRunning(GenericSprite):
     def __init__(self):
         super().__init__()
         self.load_sprites('src/assets/ladino/actions/run/{}.png', sprites_number=24)
-        self.rect.topleft = (200, 400)
+        self.rect.topleft = (200, 350)
 
     def update(self):
         self.atual += 0.25
