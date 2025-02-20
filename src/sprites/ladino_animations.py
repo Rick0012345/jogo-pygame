@@ -15,12 +15,18 @@ class Player(GenericSprite):
 class PlayerRunning(GenericSprite):
     def __init__(self):
         super().__init__()
-        self.load_sprites('src/assets/ladino/actions/run/{}.png', sprites_number=9)
+        self.load_sprites('src/assets/ladino/actions/run/{}.png', sprites_number=24)
         self.rect.topleft = (200, 400)
 
     def update(self):
-        self.atual += 0.1
+        self.atual += 0.25
         if self.atual >= len(self.sprites):
             self.atual = 0
+
+        if int(self.atual) % 3 == 0 :
+            
+            self.rect.y -= 1
+        elif int(self.atual) % 3 == 1:
+            self.rect.y += 1
         self.image = self.sprites[int(self.atual)]
 
