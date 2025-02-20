@@ -23,9 +23,7 @@ class Game:
             for event in pygame.event.get():
                 if event.type == QUIT:
                     self.quit() 
-
-            self.update()    
-
+    
             todas_as_sprites.draw(tela)
             todas_as_sprites.update()
             
@@ -33,9 +31,6 @@ class Game:
             self.render()
             i += 1
 
-    def update(self):
-        # Atualiza o estado do jogo (neste exemplo, não há nada para atualizar)
-        pass
 
     def render(self):
         # Preenche a tela com a cor preta
@@ -47,7 +42,3 @@ class Game:
         pygame.quit()
         exit()
 
-# Cria uma instância do jogo e executa
-if __name__ == "__main__":
-    game = Game( 800, 600, title="Jogo Pygame")
-    game.run()

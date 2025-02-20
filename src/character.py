@@ -26,8 +26,10 @@ class PlayerRunning(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.sprites = []
-        for img in range(0, 24 ):
+
+        for img in range(0, 9 ):
             self.sprites.append(pygame.image.load(f'src/assets/ladino/actions/run/{img}.png'))
+
         self.atual = 0
         self.image = self.sprites[0]
         
@@ -35,8 +37,10 @@ class PlayerRunning(pygame.sprite.Sprite):
         self.rect.topleft = (200, 400)
     
     def update(self):
-        self.atual += 0.05
+        self.atual += 0.1
         if self.atual >= len(self.sprites):
             self.atual = 0
         self.image = self.sprites[int(self.atual)]
+        
+        
         
