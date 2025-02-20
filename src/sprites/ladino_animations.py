@@ -1,4 +1,4 @@
-from base_sprites import GenericSprite
+from src.sprites.base_sprites import GenericSprite
 
 class Player(GenericSprite):
     def __init__(self):
