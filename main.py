@@ -1,5 +1,5 @@
 from src.game import *
-from src.base_sprites import Player, PlayerRunning
+from src.ladino import Ladino, LadinoRunningJump
 
 lista = pygame.sprite.Group()
 
